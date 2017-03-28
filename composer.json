@@ -1,0 +1,23 @@
+{
+    "name": "vorgas/zfa-actions",
+    "description": "Integrates with Apigility to automate Api responses",
+    "keywords": ["apigility", "response", "mysql"],
+    "homepage": "https://github.com/vorgas/zfa-actions",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mike Hill",
+            "email": "mikehill.pointless@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "zfcampus/zf-api-problem": "^1.2",
+        "zendframework/zend-db": "^2.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "vorgas\\ZfaActions\\": "src"
+        }
+    }
+}
