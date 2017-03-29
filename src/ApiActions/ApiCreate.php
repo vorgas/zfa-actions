@@ -28,7 +28,7 @@
  * SOFTWARE.
  */
 
-namespace vorgas\ZfaApiActions\ApiActions;
+namespace vorgas\ZfaActions\ApiActions;
 
 
 /**
@@ -45,7 +45,7 @@ class ApiCreate extends AbstractApiAction
      * Puts $data into into an object that can be inserted into a config array
      *
      * {@inheritDoc}
-     * @see \vorgas\ZfaApiActions\ApiActions\AbstractApiAction::convertData()
+     * @see \vorgas\ZfaActions\ApiActions\AbstractApiAction::convertData()
      */
     public function convertData($data, $id): array
     {
@@ -61,7 +61,7 @@ class ApiCreate extends AbstractApiAction
      * failed, this wouldn't even be called.
      *
      * {@inheritDoc}
-     * @see \vorgas\ZfaApiActions\ApiActions\AbstractApiAction::resultToContainer()
+     * @see \vorgas\ZfaActions\ApiActions\AbstractApiAction::resultToContainer()
      */
     protected function resultToContainer($result)
     {

@@ -28,7 +28,7 @@
  * SOFTWARE.
  */
 
-namespace vorgas\ZfaApiActions\ApiActions;
+namespace vorgas\ZfaActions\ApiActions;
 
 /**
  * Handles a GET request on a resource entity
@@ -44,7 +44,7 @@ class ApiFetch extends AbstractApiAction
      * processing on them!
      *
      * {@inheritDoc}
-     * @see \vorgas\ZfaApiActions\ApiActions\AbstractApiAction::convertData()
+     * @see \vorgas\ZfaActions\ApiActions\AbstractApiAction::convertData()
      */
     public function convertData($data, $id): array
     {
@@ -56,7 +56,7 @@ class ApiFetch extends AbstractApiAction
      * Just get the first line from the result set and move into the container
      *
      * {@inheritDoc}
-     * @see \vorgas\ZfaApiActions\ApiActions\AbstractApiAction::resultToContainer()
+     * @see \vorgas\ZfaActions\ApiActions\AbstractApiAction::resultToContainer()
      */
     protected function resultToContainer($result)
     {

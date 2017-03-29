@@ -28,16 +28,15 @@
  * SOFTWARE.
  */
 
-namespace vorgas\ZfaApiActions;
+namespace vorgas\ZfaActions;
 
 use Zend\Db\Adapter\AdapterInterface;
-use vorgas\ZfaApiActions\ApiActions\AbstractApiAction;
-use ZF\ApiProblem\ApiProblem;
+use vorgas\ZfaActions\ApiActions\AbstractApiAction;
 use Zend\Db\Sql\Sql;
 use Zend\Db\Sql\SqlInterface;
 use Zend\Paginator\Adapter\DbSelect;
-use vorgas\ZfaApiActions\ApiActions\ApiActionInterface;
-use vorgas\ZfaApiActions\ApiActions\ApiActionFactoryInterface;
+use vorgas\ZfaActions\ApiActions\ApiActionInterface;
+use vorgas\ZfaActions\ApiActions\ApiActionFactoryInterface;
 
 
 /**

@@ -28,43 +28,44 @@
  * SOFTWARE.
  */
 
-namespace vorgas\ZfaActions\ApiActions;
+namespace vorgas\ZfaActions;
+
+use Zend\Hydrator\Reflection;
 
 /**
- * Handles a GET request on a resource entity
+ * Allows entity declaration of properties only
+ *
+ * By implementing this class an apiglity resource entity only has to declare
+ * public properties. These are then hydrated automatically.
  */
-class ApiFetchOne extends AbstractApiAction
+abstract class AbstractReflectionEntity
 {
-    /**
-     * Prepares the config object for retrieving an entity
-     *
-     * For some reason, the Apigility ServiceResource does not include a way
-     * to move query options into an entity request. So this extracts them
-     * directly from the php $_GET object. This means there is no filtering or
-     * processing on them!
-     *
-     * {@inheritDoc}
-     * @see \vorgas\ZfaActions\ApiActions\AbstractApiAction::convertData()
-     */
-    public function convertData($data, $id): array
+    protected $hydrator;
+    public function __construct()
     {
-        if (is_null($id)) $id = $data;
-        return ['id' => $id, 'params' => $_GET];
+        $this->hydrator = new Reflection();
     }
 
-    /**
-     * Just get the first line from the result set and move into the container
-     *
-     * {@inheritDoc}
-     * @see \vorgas\ZfaActions\ApiActions\AbstractApiAction::resultToContainer()
-     */
-    protected function resultToContainer($result)
-    {
-        $data = $result->next();
-        if (! $data) return false;
 
-        $this->container->exchangeArray($data);
-        return $this->container;
+    /**
+     * Extracts the property values and returns them as an array
+     */
+    public function getArrayCopy()
+    {
+        $array = $this->hydrator->extract($this);
+        unset($array['hydrator']);
+        return $array;
+    }
+
+
+    /**
+     * Hydrates the object from an array of information
+     *
+     * @param array $array
+     */
+    public function exchangeArray(array $array)
+    {
+        $this->hydrator->hydrate($array, $this);
     }
 }
 

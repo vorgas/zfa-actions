@@ -1,5 +1,5 @@
 <?php
-namespace vorgas\ZfaApiActions\ApiActions;
+namespace vorgas\ZfaActions\ApiActions;
 
 use Zend\Db\Sql\SqlInterface;
 use ZF\ApiProblem\ApiProblem;
@@ -21,14 +21,14 @@ abstract class AbstractApiAction implements ApiActionInterface
      */
     public function __construct()
     {
-        $this->exception = 'vorgas\ZfaApiActions\PdoProblemFactory::build';
+        $this->exception = 'vorgas\ZfaActions\PdoProblemFactory::build';
     }
 
     
     /**
      * (non-PHPdoc)
      *
-     * @see \vorgas\ZfaApiActions\ApiActions\ApiActionInterface::execute()
+     * @see \vorgas\ZfaActions\ApiActions\ApiActionInterface::execute()
      *
      */
     public function execute()
@@ -52,7 +52,7 @@ abstract class AbstractApiAction implements ApiActionInterface
     /**
      * (non-PHPdoc)
      *
-     * @see \vorgas\ZfaApiActions\ApiActions\ApiActionInterface::getContainer()
+     * @see \vorgas\ZfaActions\ApiActions\ApiActionInterface::getContainer()
      *
      */
     public function getContainer()
@@ -64,7 +64,7 @@ abstract class AbstractApiAction implements ApiActionInterface
     /**
      * (non-PHPdoc)
      *
-     * @see \vorgas\ZfaApiActions\ApiActions\ApiActionInterface::getCrud()
+     * @see \vorgas\ZfaActions\ApiActions\ApiActionInterface::getCrud()
      *
      */
     public function getCrud(): SqlInterface
@@ -76,7 +76,7 @@ abstract class AbstractApiAction implements ApiActionInterface
     /**
      * (non-PHPdoc)
      *
-     * @see \vorgas\ZfaApiActions\ApiActions\ApiActionInterface::getException()
+     * @see \vorgas\ZfaActions\ApiActions\ApiActionInterface::getException()
      *
      */
     public function getException(): callable
@@ -88,7 +88,7 @@ abstract class AbstractApiAction implements ApiActionInterface
     /**
      * (non-PHPdoc)
      *
-     * @see \vorgas\ZfaApiActions\ApiActions\ApiActionInterface::getSql()
+     * @see \vorgas\ZfaActions\ApiActions\ApiActionInterface::getSql()
      *
      */
     public function getSql()
@@ -100,7 +100,7 @@ abstract class AbstractApiAction implements ApiActionInterface
     /**
      * (non-PHPdoc)
      *
-     * @see \vorgas\ZfaApiActions\ApiActions\ApiActionInterface::prepare()
+     * @see \vorgas\ZfaActions\ApiActions\ApiActionInterface::prepare()
      *
      */
     public function prepare($sql = null, SqlInterface $crud = null, $container = null, callable $exception = null)
@@ -115,7 +115,7 @@ abstract class AbstractApiAction implements ApiActionInterface
     /**
      * (non-PHPdoc)
      *
-     * @see \vorgas\ZfaApiActions\ApiActions\ApiActionInterface::setContainer()
+     * @see \vorgas\ZfaActions\ApiActions\ApiActionInterface::setContainer()
      *
      */
     public function setContainer($container, $data = null)
@@ -127,7 +127,7 @@ abstract class AbstractApiAction implements ApiActionInterface
     /**
      * (non-PHPdoc)
      *
-     * @see \vorgas\ZfaApiActions\ApiActions\ApiActionInterface::setCrud()
+     * @see \vorgas\ZfaActions\ApiActions\ApiActionInterface::setCrud()
      *
      */
     public function setCrud(SqlInterface $crud, $data = null)
@@ -139,7 +139,7 @@ abstract class AbstractApiAction implements ApiActionInterface
     /**
      * (non-PHPdoc)
      *
-     * @see \vorgas\ZfaApiActions\ApiActions\ApiActionInterface::setException()
+     * @see \vorgas\ZfaActions\ApiActions\ApiActionInterface::setException()
      *
      */
     public function setException(callable $exception, $data = null)
@@ -151,7 +151,7 @@ abstract class AbstractApiAction implements ApiActionInterface
     /**
      * (non-PHPdoc)
      *
-     * @see \vorgas\ZfaApiActions\ApiActions\ApiActionInterface::setSql()
+     * @see \vorgas\ZfaActions\ApiActions\ApiActionInterface::setSql()
      *
      */
     public function setSql($sql, $data = null)
@@ -179,7 +179,7 @@ abstract class AbstractApiAction implements ApiActionInterface
     /**
      * (non-PHPdoc)
      *
-     * @see \vorgas\ZfaApiActions\ApiActions\ApiActionInterface::convertData()
+     * @see \vorgas\ZfaActions\ApiActions\ApiActionInterface::convertData()
      *
      */
     abstract public function convertData($data, $id): array;

@@ -28,7 +28,7 @@
  * SOFTWARE.
  */
 
-namespace vorgas\ZfaApiActions\ApiActions;
+namespace vorgas\ZfaActions\ApiActions;
 
 
 /**
@@ -45,7 +45,7 @@ class ApiFetchAll extends AbstractApiAction
      * Sql object is passed over to the DbSelect paginator.
      *
      * {@inheritDoc}
-     * @see \vorgas\ZfaApiActions\ApiActions\AbstractApiAction::convertData()
+     * @see \vorgas\ZfaActions\ApiActions\AbstractApiAction::convertData()
      */
     public function convertData($data, $id): array
     {
@@ -57,7 +57,7 @@ class ApiFetchAll extends AbstractApiAction
      * Returns a paginator database adapter for handling large data sets
      *
      * {@inheritDoc}
-     * @see \vorgas\ZfaApiActions\ApiActions\AbstractApiAction::resultToContainer()
+     * @see \vorgas\ZfaActions\ApiActions\AbstractApiAction::resultToContainer()
      */
     protected function resultToContainer($result)
     {

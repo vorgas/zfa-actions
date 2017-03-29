@@ -28,7 +28,7 @@
  * SOFTWARE.
  */
 
-namespace vorgas\ZfaApiActions\ApiActions;
+namespace vorgas\ZfaActions\ApiActions;
 
 use Zend\Db\Adapter\AdapterInterface;
 

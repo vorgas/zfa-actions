@@ -28,7 +28,7 @@
  * SOFTWARE.
  */
 
-namespace vorgas\ZfaApiActions\ApiActions;
+namespace vorgas\ZfaActions\ApiActions;
 
 
 /**
@@ -40,7 +40,7 @@ class ApiDelete extends AbstractApiAction
      * Moves the resource id number into the config array
      *
      * {@inheritDoc}
-     * @see \vorgas\ZfaApiActions\ApiActions\AbstractApiAction::convertData()
+     * @see \vorgas\ZfaActions\ApiActions\AbstractApiAction::convertData()
      */
     public function convertData($data, $id): array
     {
@@ -52,7 +52,7 @@ class ApiDelete extends AbstractApiAction
      * Upon a successful delete, there is no resource, so just return true
      *
      * {@inheritDoc}
-     * @see \vorgas\ZfaApiActions\ApiActions\AbstractApiAction::resultToContainer()
+     * @see \vorgas\ZfaActions\ApiActions\AbstractApiAction::resultToContainer()
      */
     protected function resultToContainer($result)
     {
