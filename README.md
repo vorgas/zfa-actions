@@ -19,7 +19,9 @@ So I just put it all into one library.
 
 ## Installation
 
-*Installation instructions needed*
+```php
+composer install "vorgas/zfa-actions dev-master"
+```
 
 ## Tests
 

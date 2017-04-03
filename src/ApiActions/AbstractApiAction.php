@@ -2,8 +2,6 @@
 namespace vorgas\ZfaActions\ApiActions;
 
 use Zend\Db\Sql\SqlInterface;
-use ZF\ApiProblem\ApiProblem;
-use function GuzzleHttp\json_encode;
 
 /**
  *
@@ -21,7 +19,7 @@ abstract class AbstractApiAction implements ApiActionInterface
      */
     public function __construct()
     {
-        $this->exception = 'vorgas\ZfaActions\PdoProblemFactory::build';
+        $this->exception = 'vorgas\ZfaActions\ProblemFactory::build';
     }
 
     

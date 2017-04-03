@@ -13,7 +13,9 @@
     "require": {
         "php": "^7.0",
         "zfcampus/zf-api-problem": "^1.2",
-        "zendframework/zend-db": "^2.8"
+        "zendframework/zend-db": "^2.8",
+        "zendframework/zend-paginator": "^2.7",
+        "zendframework/zend-hydrator": "^2.2"
     },
     "autoload": {
         "psr-4": {
